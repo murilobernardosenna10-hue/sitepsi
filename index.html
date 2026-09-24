@@ -1,0 +1,1089 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Psicóloga en [CIUDAD]. Terapia individual con enfoque de [ENFOQUE TERAPÉUTICO] para ansiedad, estrés, autoestima, relaciones, duelo y cambios vitales. Sesiones online y presenciales.">
+<title>Psicóloga en [CIUDAD] · Terapia individual</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#22211D}
+a{color:inherit}a:hover{color:inherit}
+.site{--ivory:#F3EEE5;--paper:#EAE3D6;--sand:#D9CBB6;--ink:#22211D;--ink2:#4B4841;--muted:#6B665C;--terra:#9A5642;--terra2:#B66F58;--sage:#46564A;--line:rgba(34,33,29,.16);--line-l:rgba(243,238,229,.24);--ease:cubic-bezier(.2,.7,.1,1);--serif:'Cormorant Garamond','Cormorant',Garamond,'Times New Roman',serif;--sans:'Manrope','Helvetica Neue',Helvetica,Arial,sans-serif;position:relative;background:var(--ivory);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+.site *,.site *::before,.site *::after{box-sizing:border-box}
+.site ::selection{background:var(--terra);color:var(--ivory)}
+.site a{text-decoration:none;color:inherit}
+.site img{display:block;max-width:100%}
+.site :where(h1,h2,h3,p,figure,blockquote,dl,dd,ol,ul){margin:0;padding:0}
+.site :where(ol,ul){list-style:none}
+.site button{font:inherit;color:inherit}
+.site :focus-visible{outline:2px solid var(--terra);outline-offset:4px;border-radius:2px}
+.skip{position:fixed;left:16px;top:-80px;z-index:300;background:var(--ink);color:var(--ivory)!important;padding:12px 18px;font-size:14px;font-weight:600;transition:top .3s}
+.skip:focus{top:16px}
+.wrap{width:100%;max-width:1440px;margin:0 auto;padding-inline:clamp(20px,4.2vw,64px)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(14px,2vw,28px)}
+.display-xl{font-family:var(--serif);font-weight:400;font-size:clamp(46px,7.4vw,116px);line-height:.95;letter-spacing:-.022em}
+.display-l{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5vw,78px);line-height:1.02;letter-spacing:-.018em;text-wrap:balance}
+.display-m{font-family:var(--serif);font-weight:400;font-size:clamp(34px,3.5vw,54px);line-height:1.06;letter-spacing:-.015em;text-wrap:balance}
+.site h1 em,.site h2 em,.site h3 em{font-style:italic;color:var(--terra)}
+.sec-label{display:flex;align-items:center;gap:12px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.sec-label .num{font-family:var(--serif);font-style:italic;font-size:19px;letter-spacing:0;text-transform:none;font-weight:400;color:var(--terra)}
+.sec-label::after{content:'';width:44px;height:1px;background:currentColor;opacity:.35}
+.micro{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+
+/* botones y enlaces */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 26px 0 30px;border-radius:999px;font-size:14.5px;font-weight:600;letter-spacing:.01em;transition:transform .7s var(--ease),background-color .45s,color .45s;will-change:transform}
+.btn-ink{background:var(--ink);color:var(--ivory)!important}
+.btn-ink:hover{background:var(--terra)}
+.btn-sm{min-height:44px;padding:0 20px;font-size:13.5px}
+.mag-inner{display:inline-flex;align-items:center;gap:14px;transition:transform .7s var(--ease)}
+.arrow{width:18px;height:18px;flex:none;transition:transform .5s var(--ease)}
+.arrow path{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.btn:hover .arrow,.tlink:hover .arrow{transform:translateX(4px)}
+.ulink{position:relative;display:inline-block;padding:6px 0}
+.ulink::after{content:'';position:absolute;left:0;right:0;bottom:2px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .55s var(--ease)}
+.ulink:hover::after{transform:scaleX(1);transform-origin:left}
+.tlink{display:inline-flex;align-items:center;gap:12px;min-height:44px;font-size:14.5px;font-weight:600;border-bottom:1px solid currentColor;padding-bottom:2px}
+
+/* cursor */
+.cursor{position:fixed;left:0;top:0;z-index:400;pointer-events:none;display:none;mix-blend-mode:difference;transition:opacity .3s}
+.has-cursor .cursor{display:block}
+.has-cursor,.has-cursor a,.has-cursor button{cursor:none}
+.cursor.is-out{opacity:0}
+.cursor-dot,.cursor-ring{position:fixed;left:0;top:0;border-radius:50%;will-change:transform}
+.cursor-dot{width:6px;height:6px;margin:-3px 0 0 -3px;background:#F3EEE5;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease)}
+.cursor-ring{width:34px;height:34px;margin:-17px 0 0 -17px;border:1px solid rgba(243,238,229,.7);transition:width .45s var(--ease),height .45s var(--ease),margin .45s var(--ease),border-color .3s}
+.cursor.is-link .cursor-ring{width:58px;height:58px;margin:-29px 0 0 -29px;border-color:rgba(243,238,229,.95)}
+.cursor.is-link .cursor-dot{width:0;height:0;margin:0}
+.cursor.is-media .cursor-ring{width:84px;height:84px;margin:-42px 0 0 -42px}
+
+/* progreso */
+.progress{position:fixed;left:0;right:0;top:0;height:2px;z-index:60;pointer-events:none}
+.progress-bar{display:block;height:100%;background:var(--terra);transform:scaleX(0);transform-origin:left}
+
+/* navegación */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;border-bottom:1px solid transparent;transition:transform .7s var(--ease),background-color .45s,border-color .45s}
+.nav.is-scrolled{background:rgba(243,238,229,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-color:var(--line)}
+.nav.is-hidden{transform:translateY(-101%)}
+.nav.on-intro{background:transparent;border-color:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:88px;transition:height .5s var(--ease)}
+.nav.is-scrolled .nav-inner{height:72px}
+.brand{display:flex;flex-direction:column;line-height:1;min-height:44px;justify-content:center}
+.brand-name{font-family:var(--serif);font-size:23px;letter-spacing:-.01em;font-weight:500}
+.brand-sub{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--muted);margin-top:7px}
+.nav-links{display:flex;align-items:center;gap:clamp(16px,1.9vw,30px);font-size:13.5px;font-weight:500}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.menu-btn{display:none;align-items:center;gap:12px;min-height:44px;padding:0 4px 0 12px;background:none;border:0;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.menu-lines{position:relative;width:26px;height:12px;display:block}
+.menu-lines i{position:absolute;left:0;right:0;height:1.5px;background:currentColor;transition:transform .5s var(--ease),top .5s var(--ease)}
+.menu-lines i:first-child{top:2px}.menu-lines i:last-child{top:9px}
+.menu-lines.is-open i:first-child{top:5.5px;transform:rotate(45deg)}
+.menu-lines.is-open i:last-child{top:5.5px;transform:rotate(-45deg)}
+.mmenu{position:fixed;inset:0;z-index:45;background:var(--ivory);display:flex;flex-direction:column;justify-content:space-between;padding:112px clamp(20px,5vw,48px) 32px;overflow-y:auto;visibility:hidden;clip-path:inset(0 0 100% 0);transition:clip-path .8s var(--ease),visibility 0s linear .8s}
+.mmenu.is-open{visibility:visible;clip-path:inset(0 0 0 0);transition:clip-path .8s var(--ease)}
+.mmenu-links{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.mmenu-links a{display:flex;align-items:baseline;gap:18px;font-family:var(--serif);font-size:clamp(36px,8.6vw,60px);line-height:1.1;padding:10px 0 12px;border-bottom:1px solid var(--line);opacity:0;transform:translateY(24px);transition:opacity .6s,transform .8s var(--ease)}
+.mmenu-links a .n{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.14em;color:var(--terra);min-width:22px}
+.mmenu.is-open .mmenu-links a{opacity:1;transform:none}
+.mmenu.is-open .mmenu-links a:nth-child(1){transition-delay:.18s}.mmenu.is-open .mmenu-links a:nth-child(2){transition-delay:.23s}.mmenu.is-open .mmenu-links a:nth-child(3){transition-delay:.28s}.mmenu.is-open .mmenu-links a:nth-child(4){transition-delay:.33s}.mmenu.is-open .mmenu-links a:nth-child(5){transition-delay:.38s}.mmenu.is-open .mmenu-links a:nth-child(6){transition-delay:.43s}
+.mmenu-foot{display:flex;flex-direction:column;gap:18px;margin-top:40px}
+.mmenu-foot .btn{width:100%}
+.mmenu-foot p{font-size:13px;color:var(--muted)}
+
+/* revelados */
+.motion [data-reveal]{opacity:0;transform:translate3d(0,28px,0);transition:opacity 1.1s ease,transform 1.3s var(--ease)}
+.motion [data-reveal].is-in{opacity:1;transform:none}
+.motion [data-reveal="clip"]{opacity:1;transform:translate3d(0,24px,0);clip-path:inset(0 0 100% 0);transition:clip-path 1.3s var(--ease),transform 1.3s var(--ease)}
+.motion [data-reveal="clip"].is-in{clip-path:inset(-10% -5% -20% -5%);transform:none}
+.motion [data-reveal="image"]{opacity:1;transform:none;clip-path:inset(100% 0 0 0);transition:clip-path 1.5s var(--ease)}
+.motion [data-reveal="image"].is-in{clip-path:inset(0 0 0 0)}
+.motion [data-reveal="image"] .photo-scale{transform:scale(1.14)}
+.motion [data-reveal="image"].is-in .photo-scale{transform:scale(1)}
+.motion [data-reveal="words"]{opacity:1;transform:none}
+.motion [data-reveal="words"] .w{transform:translate3d(0,110%,0)}
+.motion [data-reveal="words"].is-in .w{transform:none}
+.motion [data-reveal="line"]{opacity:1;transform:scaleX(0);transform-origin:left;transition:transform 1.4s var(--ease)}
+.motion [data-reveal="line"].is-in{transform:scaleX(1)}
+.site [data-d="1"]{transition-delay:.07s}.site [data-d="2"]{transition-delay:.14s}.site [data-d="3"]{transition-delay:.21s}.site [data-d="4"]{transition-delay:.28s}.site [data-d="5"]{transition-delay:.35s}.site [data-d="6"]{transition-delay:.42s}.site [data-d="7"]{transition-delay:.49s}.site [data-d="8"]{transition-delay:.56s}.site [data-d="9"]{transition-delay:.63s}.site [data-d="10"]{transition-delay:.7s}.site [data-d="11"]{transition-delay:.77s}.site [data-d="12"]{transition-delay:.84s}.site [data-d="13"]{transition-delay:.91s}.site [data-d="14"]{transition-delay:.98s}.site [data-d="15"]{transition-delay:1.05s}.site [data-d="16"]{transition-delay:1.12s}
+@keyframes dcShow{to{opacity:1;transform:none;clip-path:none}}
+.motion:not(.js) [data-reveal],.motion:not(.js) [data-reveal] .w,.motion:not(.js) [data-reveal] .photo-scale{animation:dcShow .01s 2.4s forwards}
+
+/* fotografía */
+.photo-frame{position:relative;overflow:hidden;background:var(--sand)}
+.photo-par{position:absolute;left:0;right:0;top:-7%;height:114%;will-change:transform}
+.photo-scale{position:absolute;inset:0;transition:transform 2.2s var(--ease)}
+.photo-img{width:100%;height:100%;object-fit:cover}
+.ph{position:absolute;inset:0;background:radial-gradient(120% 80% at 32% 18%,#E7DCCC 0%,#D6C6B0 55%,#C8B49A 100%)}
+.ph::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(34,33,29,.07) 1px,transparent 1.2px);background-size:5px 5px}
+.ph-fig{position:absolute;left:0;right:0;bottom:0;width:100%;height:78%}
+.ph-fig circle,.ph-fig path{fill:rgba(110,86,62,.16)}
+.ph-label{position:absolute;z-index:1;left:20px;bottom:18px;font-size:10.5px;letter-spacing:.18em;font-weight:700;text-transform:uppercase;color:#4F4439}
+
+/* introducción: secuencia al desplazar */
+.leaf{position:relative;z-index:1;height:min(480vh,6240px);background:#ECE7DB}
+.leaf-stage{position:sticky;top:0;height:min(100vh,1300px);overflow:hidden;background:#ECE7DB}
+.leaf-poster,.leaf-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.leaf-poster{object-fit:cover}
+.leaf-canvas{opacity:0;transition:opacity .6s ease}
+.leaf-canvas.is-ready{opacity:1}
+.leaf-quote{position:absolute;z-index:2;left:0;right:0;top:44%;display:flex;flex-direction:column;align-items:center;gap:.18em;padding-inline:24px;text-align:center;font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.6vw,42px);line-height:1.22;letter-spacing:-.005em;color:#3A3832}
+.leaf-quote span{display:block;will-change:opacity,transform,filter}
+.leaf-quote em{font-style:italic;color:var(--terra)}
+.leaf-hint{position:absolute;z-index:2;left:50%;bottom:32px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:12px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:#5A5549}
+.leaf-hint-line{position:relative;width:1px;height:52px;overflow:hidden;background:rgba(34,33,29,.18)}
+.leaf-hint-line::after{content:'';position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--ink);animation:leafDrop 2.4s var(--ease) infinite}
+@keyframes leafDrop{to{top:100%}}
+.leaf-skip{position:absolute;z-index:3;right:clamp(20px,4.2vw,64px);bottom:28px;display:inline-flex;align-items:center;min-height:44px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#4B4841!important}
+.leaf-veil{position:absolute;z-index:4;inset:0;background:#22211D;opacity:0;pointer-events:none}
+.leaf + .hero{margin-top:calc(-1 * min(100vh,1300px));z-index:2;background:var(--ivory);box-shadow:0 -40px 80px -40px rgba(34,33,29,.28)}
+.site #inicio{scroll-margin-top:0}
+.leaf-canvas{transform-origin:50% 60%}
+.leaf.is-static{height:auto}
+.leaf.is-static + .hero{margin-top:0;box-shadow:none}
+.leaf.is-static .leaf-stage{position:relative;height:min(100vh,1000px)}
+.leaf.is-static .leaf-hint,.leaf.is-static .leaf-skip{display:none}
+@media (orientation:portrait){.leaf-poster{top:17%;height:62%}}
+@media (max-width:640px){.leaf-skip{left:50%;right:auto;transform:translateX(-50%);bottom:8px}.leaf-hint{bottom:64px}}
+
+/* hero */
+.hero{position:relative;padding-top:clamp(128px,11vw,176px);padding-bottom:clamp(56px,6vw,88px)}
+.hero-grid{align-items:start;row-gap:48px}
+.hero-copy{grid-column:1 / span 8;position:relative;z-index:2;padding-top:24px}
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--ink2);margin-bottom:clamp(28px,3vw,44px)}
+.eyebrow-line{width:56px;height:1px;background:var(--terra);display:block}
+.hero-title .ln{display:block;overflow:hidden;padding-bottom:.07em;margin-bottom:-.07em}
+.hero-title .ln.in1{padding-left:.9em}
+.hero-title .ln.in2{padding-left:1.45em}
+.hero-title .w{display:inline-block;transition:transform 1.2s var(--ease)}
+.hero-lower{display:grid;grid-template-columns:minmax(0,470px);margin-top:clamp(36px,4vw,56px)}
+.hero-sub{font-size:clamp(17px,1.3vw,19px);line-height:1.62;color:var(--ink2)}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:18px 30px;margin-top:36px}
+.hero-figure{grid-column:9 / span 4;position:relative;isolation:isolate;margin-top:clamp(40px,7vw,104px)}
+.hero-figure .photo-frame{aspect-ratio:4 / 5}
+.hero-block{position:absolute;z-index:-1;left:-20%;bottom:-44px;width:58%;height:44%;background:var(--terra2)}
+.hero-caption{position:absolute;right:calc(-1 * clamp(20px,2.4vw,34px));top:0;writing-mode:vertical-rl;transform:rotate(180deg);display:flex;gap:18px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--muted);white-space:nowrap}
+.hero-meta{grid-column:1 / -1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(40px,5vw,72px);border-top:1px solid var(--line)}
+.hero-meta > div{padding:20px 24px 0 0}
+.hero-meta > div + div{padding-left:24px;border-left:1px solid var(--line)}
+.hero-meta dd{font-family:var(--serif);font-size:clamp(19px,1.6vw,23px);line-height:1.25;margin-top:8px}
+
+/* secciones */
+.section{position:relative;padding-block:clamp(96px,11vw,168px)}
+.site section[id]{scroll-margin-top:64px}
+.sec-head{align-items:start;row-gap:28px;margin-bottom:clamp(56px,7vw,104px)}
+.sec-head .sec-label{grid-column:1 / span 4;padding-top:16px}
+.sec-head .sec-title{grid-column:5 / span 8}
+
+/* sobre mí */
+.about-grid{align-items:start;row-gap:64px}
+.about-figure{grid-column:1 / span 5;position:relative;isolation:isolate}
+.about-figure .photo-frame{aspect-ratio:3 / 4}
+.about-figure::before{content:'';position:absolute;z-index:-1;right:-16%;top:14%;width:50%;height:62%;background:var(--sand)}
+.about-figure figcaption{display:flex;justify-content:space-between;gap:16px;margin-top:16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.about-text{grid-column:7 / span 6;padding-top:clamp(0px,5vw,88px)}
+.lead{font-family:var(--serif);font-size:clamp(24px,2.2vw,32px);line-height:1.3;letter-spacing:-.005em}
+.cols-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:40px;font-size:15.5px;color:var(--ink2)}
+.principles{margin-top:56px;border-top:1px solid var(--line)}
+.principles li{display:grid;grid-template-columns:48px minmax(0,1fr) minmax(0,1.35fr);gap:20px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line)}
+.principles .n{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--terra)}
+.principles h3{font-family:var(--serif);font-weight:500;font-size:23px;line-height:1.2}
+.principles p{font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.pull{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(14px,2vw,28px);margin-top:clamp(96px,10vw,152px)}
+.pull p{grid-column:2 / span 9;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(34px,4.3vw,66px);line-height:1.08;letter-spacing:-.015em;text-wrap:balance}
+.pull footer{grid-column:8 / span 5;display:flex;align-items:center;gap:14px;margin-top:28px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--ink2)}
+.pull footer::before{content:'';width:40px;height:1px;background:var(--terra)}
+.creds{margin-top:clamp(72px,8vw,120px);padding-top:28px;border-top:1px solid var(--line);row-gap:28px}
+.creds > div{grid-column:span 4}
+.creds dd{font-family:var(--serif);font-size:21px;line-height:1.3;margin-top:8px}
+
+/* diez cosas sobre mí */
+.ten{margin-top:clamp(112px,12vw,176px);padding-top:clamp(56px,6vw,88px);border-top:1px solid var(--line)}
+.ten-grid{align-items:start;row-gap:56px}
+.ten-aside{grid-column:1 / span 5}
+.ten-aside .sec-label{margin-bottom:28px}
+.ten-intro{margin-top:22px;max-width:400px;font-size:16px;color:var(--ink2)}
+.ten-photos{position:relative;margin-top:48px;padding-bottom:clamp(96px,10vw,150px)}
+.ten-ph-a .photo-frame{aspect-ratio:687 / 373}
+.ten-ph-b{position:absolute;z-index:2;right:-8%;bottom:0;width:42%;padding:10px;background:var(--ivory)}
+.ten-ph-b .photo-frame{aspect-ratio:383 / 468}
+.ten-ph figcaption{margin-top:12px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.ten-ph-b figcaption{margin-top:10px}
+.ten-list{grid-column:7 / span 6;border-top:1px solid var(--line)}
+.ten-list li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:16px;align-items:baseline;padding:19px 0 21px;border-bottom:1px solid var(--line)}
+.ten-list .n{font-size:11.5px;letter-spacing:.14em;font-weight:600;color:var(--ink2);transition:color .4s}
+.ten-list p{font-family:var(--serif);font-size:clamp(21px,1.75vw,25px);line-height:1.3;transition:transform .8s var(--ease)}
+.ten-list strong{font-style:italic;font-weight:500;color:var(--terra)}
+.ten-list li:hover .n{color:var(--terra)}
+.ten-list li:hover p{transform:translateX(8px)}
+
+/* botón flotante de WhatsApp */
+.wa-float{position:fixed;right:clamp(16px,3vw,40px);bottom:24px;z-index:42;opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .5s,transform .8s var(--ease)}
+.wa-float.is-visible{opacity:1;transform:none;pointer-events:auto}
+.wa-btn{display:inline-flex;align-items:center;min-height:56px;padding:0 22px 0 16px;border-radius:999px;background:var(--ink);color:var(--ivory)!important;box-shadow:0 10px 30px -12px rgba(34,33,29,.45);transition:transform .7s var(--ease),background-color .45s;will-change:transform}
+.wa-btn:hover{background:var(--terra)}
+.wa-btn .mag-inner{gap:12px}
+.wa-ico{width:24px;height:24px;flex:none}
+.wa-ico path,.wa-ico circle{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.wa-txt{display:flex;flex-direction:column;line-height:1.15}
+.wa-k{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;opacity:.75}
+.wa-n{font-size:14px;font-weight:600;letter-spacing:.01em}
+.wa-link{border-bottom:1px solid currentColor;padding-bottom:1px;font-weight:600}
+
+/* cómo puedo ayudarte */
+.help{background:var(--paper)}
+.help .micro{color:var(--ink2)}
+.help-grid{align-items:start;row-gap:56px}
+.help-aside{grid-column:1 / span 4;position:sticky;top:120px}
+.help-aside .sec-label{margin-bottom:32px}
+.help-aside .intro{margin-top:28px;font-size:16px;color:var(--ink2);max-width:380px}
+.help-list{grid-column:6 / span 7;border-top:1px solid var(--line)}
+.help-row{position:relative;display:grid;grid-template-columns:56px minmax(0,1.05fr) minmax(0,1fr);gap:24px;align-items:baseline;padding:30px 0 32px;border-bottom:1px solid var(--line)}
+.help-row::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--terra);transform:scaleX(0);transform-origin:left;transition:transform .9s var(--ease)}
+.help-row:hover::after{transform:scaleX(1)}
+.help-row .n{font-size:11.5px;letter-spacing:.14em;font-weight:600;color:var(--ink2);transition:color .4s}
+.help-row h3{font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.5vw,38px);line-height:1.05;letter-spacing:-.01em;transition:transform .8s var(--ease)}
+.help-row p{font-size:15px;line-height:1.55;color:var(--ink2)}
+.help-row:hover h3{transform:translateX(10px)}
+.help-row:hover .n{color:var(--terra)}
+.help-note{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px 32px;margin-top:44px}
+.help-note p{font-family:var(--serif);font-style:italic;font-size:clamp(22px,1.9vw,27px);line-height:1.3;max-width:520px}
+
+/* cómo funciona */
+.process{background:var(--sage);color:var(--ivory)}
+.process .sec-label .num,.process h2 em{color:var(--sand)}
+.process .micro{color:var(--sand)}
+.process-head{align-items:end;row-gap:32px}
+.process-head .sec-label{grid-column:1 / -1;margin-bottom:8px}
+.process-head h2{grid-column:1 / span 7}
+.process-head .intro{grid-column:9 / span 4;font-size:16px;color:#D6D4C8}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:clamp(20px,2.4vw,36px);margin-top:clamp(72px,8vw,120px)}
+.step{position:relative;padding-top:26px}
+.step-line{position:absolute;left:0;right:0;top:0;height:1px;background:var(--line-l)}
+.step:nth-child(2){margin-top:72px}.step:nth-child(3){margin-top:144px}.step:nth-child(4){margin-top:216px}
+.step .num{display:block;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(64px,6vw,96px);line-height:.9;color:var(--sand);margin-bottom:28px}
+.step h3{font-family:var(--serif);font-weight:500;font-size:clamp(24px,2vw,28px);line-height:1.15;margin-bottom:14px}
+.step p{font-size:15px;line-height:1.62;color:#D6D4C8}
+.session-info{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(80px,9vw,128px);border-top:1px solid var(--line-l)}
+.session-info > div{padding:22px 24px 0 0}
+.session-info > div + div{padding-left:24px;border-left:1px solid var(--line-l)}
+.session-info dd{font-family:var(--serif);font-size:clamp(20px,1.7vw,24px);line-height:1.25;margin-top:8px}
+
+/* testimonios */
+.testi-grid{align-items:start;row-gap:40px}
+.testi-grid .sec-label{grid-column:1 / span 4;padding-top:12px}
+.testi-grid h2{grid-column:5 / span 7;font-family:var(--serif);font-weight:400;font-size:clamp(28px,2.6vw,40px);line-height:1.12;letter-spacing:-.01em;text-wrap:balance}
+.quotes{grid-column:5 / span 8;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,3vw,48px);margin-top:24px}
+.quote{border-top:1px solid var(--line);padding-top:28px}
+.quote:nth-child(2){margin-top:64px}
+.quote .mark{display:block;font-family:var(--serif);font-size:64px;line-height:.5;color:var(--terra2);height:26px;margin-bottom:18px}
+.quote blockquote p{font-family:var(--serif);font-style:italic;font-size:clamp(23px,2vw,29px);line-height:1.3;color:var(--ink)}
+.quote figcaption{display:flex;align-items:center;gap:12px;margin-top:22px;font-size:12px;letter-spacing:.14em;font-weight:600;text-transform:uppercase;color:var(--ink2)}
+.quote figcaption::before{content:'';width:24px;height:1px;background:currentColor}
+.testi-note{grid-column:5 / span 6;font-size:13px;line-height:1.6;color:var(--muted);margin-top:40px}
+
+/* preguntas frecuentes */
+.faq{padding-top:clamp(40px,5vw,72px)}
+.faq-grid{align-items:start;row-gap:48px}
+.faq-aside{grid-column:1 / span 4;position:sticky;top:120px}
+.faq-aside .sec-label{margin-bottom:32px}
+.faq-aside .intro{margin-top:24px;font-size:15.5px;color:var(--ink2);max-width:340px}
+.faq-aside .tlink{margin-top:24px}
+.faq-list{grid-column:6 / span 7;border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-h{font-weight:inherit;font-size:inherit}
+.faq-q{display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:24px;align-items:center;width:100%;padding:26px 0;background:none;border:0;text-align:left;cursor:pointer;font-family:var(--serif)!important;font-size:clamp(21px,1.85vw,27px)!important;line-height:1.25;letter-spacing:-.005em}
+.faq-icon{position:relative;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;transition:background-color .45s,border-color .45s,color .45s}
+.faq-icon::before,.faq-icon::after{content:'';position:absolute;left:50%;top:50%;width:13px;height:1.5px;background:currentColor;transform:translate(-50%,-50%);transition:transform .55s var(--ease)}
+.faq-icon::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq-q:hover .faq-icon{border-color:var(--ink)}
+.faq-item.is-open .faq-icon{background:var(--ink);border-color:var(--ink);color:var(--ivory)}
+.faq-item.is-open .faq-icon::after{transform:translate(-50%,-50%) rotate(0deg)}
+.faq-panel{display:grid;grid-template-rows:0fr;visibility:hidden;transition:grid-template-rows .6s var(--ease),visibility 0s linear .6s}
+.faq-item.is-open .faq-panel{grid-template-rows:1fr;visibility:visible;transition:grid-template-rows .6s var(--ease)}
+.faq-panel > div{overflow:hidden}
+.faq-panel p{padding:0 68px 30px 0;max-width:660px;font-size:16px;line-height:1.7;color:var(--ink2);opacity:0;transform:translateY(-6px);transition:opacity .4s,transform .6s var(--ease)}
+.faq-item.is-open .faq-panel p{opacity:1;transform:none;transition-delay:.12s}
+
+/* llamada final */
+.cta{background:var(--terra);color:var(--ivory);overflow:hidden}
+.cta .sec-label .num,.cta h2 em{color:var(--sand)}
+.cta-grid{align-items:center;row-gap:48px}
+.cta-grid .sec-label{grid-column:1 / -1;margin-bottom:12px}
+.cta-title{grid-column:1 / span 9;font-family:var(--serif);font-weight:400;font-size:clamp(44px,6.4vw,100px);line-height:.98;letter-spacing:-.022em;text-wrap:balance}
+.cta-action{grid-column:10 / span 3;display:flex;justify-content:center}
+.cta-circle{display:flex;align-items:center;justify-content:center;width:clamp(156px,14vw,204px);height:clamp(156px,14vw,204px);border-radius:50%;background:var(--ivory);color:var(--ink)!important;font-size:15px;font-weight:600;text-align:center;transition:transform .7s var(--ease),background-color .45s,color .45s;will-change:transform}
+.cta-circle .mag-inner{flex-direction:column;gap:10px}
+.cta-circle:hover{background:var(--ink);color:var(--ivory)!important}
+.cta-sub{grid-column:1 / span 6;font-size:clamp(16px,1.3vw,18px);line-height:1.65;color:var(--ivory)}
+.cta-mail{grid-column:8 / span 5;justify-self:end;font-size:14.5px;color:var(--ivory)}
+.cta-mail a{border-bottom:1px solid rgba(243,238,229,.6);padding-bottom:2px}
+
+/* pie */
+.footer{background:var(--ink);color:var(--ivory);padding-block:clamp(72px,8vw,112px) 32px}
+.footer .micro{color:#A8A396;margin-bottom:16px}
+.footer-top{row-gap:48px}
+.footer-intro{grid-column:1 / span 5}
+.footer-intro p{font-family:var(--serif);font-size:clamp(24px,2.2vw,32px);line-height:1.25;max-width:440px}
+.footer-col{grid-column:span 2}
+.footer-col.wide{grid-column:span 3}
+.footer-col ul{display:flex;flex-direction:column;gap:6px;font-size:14.5px}
+.footer-col li{color:#E6E1D6}
+.footer-word{font-family:var(--serif);font-weight:400;font-size:clamp(44px,7.2vw,118px);line-height:.95;letter-spacing:-.03em;margin-top:clamp(72px,8vw,120px);padding-top:40px;border-top:1px solid rgba(243,238,229,.16);text-wrap:balance}
+.footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;margin-top:40px;font-size:12.5px;line-height:1.6;color:#A8A396}
+.footer-bottom p:last-child{max-width:560px}
+
+/* indicador de sección */
+.sec-ind{position:fixed;left:clamp(20px,4.2vw,64px);bottom:24px;z-index:40;display:flex;align-items:center;gap:10px;padding:9px 16px 9px 14px;border-radius:999px;background:rgba(243,238,229,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid var(--line);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);opacity:0;transform:translateY(12px);transition:opacity .5s,transform .7s var(--ease);pointer-events:none}
+.sec-ind.is-visible{opacity:1;transform:none}
+.sec-ind .num{font-family:var(--serif);font-style:italic;font-size:16px;letter-spacing:0;text-transform:none;color:var(--terra);font-weight:500}
+
+/* responsive */
+@media (max-width:1180px){
+.nav-links{display:none}
+.menu-btn{display:inline-flex}
+}
+@media (max-width:960px){
+.hero-copy{grid-column:1 / -1}
+.hero-figure{grid-column:4 / -1;margin-top:8px}
+.hero-meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+.hero-meta > div:nth-child(3){padding-left:0;border-left:0}
+.hero-meta > div:nth-child(n+3){padding-top:20px;margin-top:20px;border-top:1px solid var(--line)}
+.sec-head .sec-label,.sec-head .sec-title{grid-column:1 / -1}
+.sec-head .sec-label{padding-top:0}
+.about-figure{grid-column:1 / span 10}
+.about-text{grid-column:1 / -1;padding-top:0}
+.pull p{grid-column:1 / -1}
+.pull footer{grid-column:1 / -1}
+.creds > div{grid-column:1 / -1}
+.help-aside,.faq-aside{grid-column:1 / -1;position:static}
+.help-list,.faq-list{grid-column:1 / -1}
+.process-head h2,.process-head .intro{grid-column:1 / -1}
+.steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:56px}
+.step:nth-child(2){margin-top:64px}.step:nth-child(3){margin-top:0}.step:nth-child(4){margin-top:64px}
+.testi-grid .sec-label,.testi-grid h2,.quotes,.testi-note{grid-column:1 / -1}
+.cta-title,.cta-sub,.cta-mail{grid-column:1 / -1}
+.cta-action{grid-column:1 / -1;justify-content:flex-end}
+.cta-mail{justify-self:start}
+.footer-intro{grid-column:1 / -1}
+.ten-aside,.ten-list{grid-column:1 / -1}
+.footer-col,.footer-col.wide{grid-column:span 4}
+.sec-ind{display:none}
+}
+@media (max-width:640px){
+.nav-cta{display:none}
+.nav-inner{height:72px}
+.brand-name{font-size:21px}
+.hero{padding-top:112px}
+.display-xl{font-size:clamp(40px,11vw,60px)}
+.hero-title .ln.in1{padding-left:.5em}
+.hero-title .ln.in2{padding-left:1em}
+.hero-actions{flex-direction:column;align-items:stretch}
+.hero-actions .btn{width:100%}
+.hero-actions .tlink{align-self:flex-start}
+.hero-figure{grid-column:2 / -1}
+.hero-caption{position:static;writing-mode:horizontal-tb;transform:none;margin-top:14px;flex-wrap:wrap;gap:6px 14px;white-space:normal}
+.hero-block{left:-14%;bottom:-28px}
+.hero-meta{grid-template-columns:minmax(0,1fr)}
+.hero-meta > div,.hero-meta > div + div{padding:18px 0 0;margin-top:18px;border-left:0;border-top:1px solid var(--line)}
+.hero-meta > div:first-child{margin-top:0;border-top:0}
+.cols-2{grid-template-columns:minmax(0,1fr);gap:18px}
+.principles li{grid-template-columns:36px minmax(0,1fr);row-gap:6px}
+.principles li p{grid-column:2}
+.help-row{grid-template-columns:40px minmax(0,1fr);row-gap:10px;padding:24px 0 26px}
+.help-row p{grid-column:2}
+.steps{grid-template-columns:minmax(0,1fr);row-gap:48px}
+.step:nth-child(n){margin-top:0}
+.step{padding-left:0}
+.session-info{grid-template-columns:minmax(0,1fr)}
+.session-info > div,.session-info > div + div{padding:18px 0 0;margin-top:18px;border-left:0;border-top:1px solid var(--line-l)}
+.session-info > div:first-child{margin-top:0;border-top:0}
+.quotes{grid-template-columns:minmax(0,1fr)}
+.quote:nth-child(2){margin-top:0}
+.faq-q{grid-template-columns:minmax(0,1fr) 44px;gap:16px;padding:22px 0}
+.faq-panel p{padding-right:0}
+.cta-action{justify-content:flex-start}
+.ten-ph-b{right:-3%;width:50%;padding:8px}
+.ten-list li{grid-template-columns:36px minmax(0,1fr)}
+.wa-float{right:16px;bottom:16px}
+.wa-btn{width:56px;padding:0;justify-content:center}
+.wa-txt{display:none}
+.footer-col,.footer-col.wide{grid-column:1 / -1}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+.site *,.site *::before,.site *::after{transition-duration:.01ms!important;transition-delay:0s!important;animation-duration:.01ms!important}
+}
+</style>
+</helmet>
+<div class="site motion" data-site-root="">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<div class="cursor is-out" data-cursor="" aria-hidden="true"><span class="cursor-ring" data-cursor-ring=""></span><span class="cursor-dot" data-cursor-dot=""></span></div>
+<div class="progress" aria-hidden="true"><span class="progress-bar" data-progress=""></span></div>
+
+<header class="nav" data-nav="">
+<div class="wrap nav-inner">
+<a class="brand" href="#inicio" aria-label="{{nombre}}, psicóloga. Ir al inicio"><span class="brand-name">{{nombre}}</span><span class="brand-sub">Psicóloga · {{ciudad}}</span></a>
+<nav class="nav-links" aria-label="Navegación principal">
+<a class="ulink" href="#inicio">Inicio</a>
+<a class="ulink" href="#sobre-mi">Sobre mí</a>
+<a class="ulink" href="#como-puedo-ayudarte">Cómo puedo ayudarte</a>
+<a class="ulink" href="#como-funciona">Cómo funciona</a>
+<a class="ulink" href="#preguntas-frecuentes">Preguntas frecuentes</a>
+<a class="ulink" href="#contacto">Contacto</a>
+</nav>
+<div class="nav-actions">
+<a class="btn btn-ink btn-sm nav-cta" data-magnetic="0.22" href="{{whatsapp}}" target="_blank" rel="noopener"><span class="mag-inner" data-magnetic-inner="">Agendar una sesión</span></a>
+<button class="menu-btn" type="button" aria-controls="menu-movil" aria-expanded="{{menuExpanded}}" onClick="{{toggleMenu}}"><span>{{menuLabel}}</span><span class="menu-lines {{menuCls}}" aria-hidden="true"><i></i><i></i></span></button>
+</div>
+</div>
+</header>
+
+<div class="mmenu {{menuCls}}" id="menu-movil" aria-hidden="{{menuHidden}}" data-native-scroll="">
+<nav class="mmenu-links" aria-label="Menú">
+<a href="#inicio" onClick="{{closeMenu}}"><span class="n">01</span>Inicio</a>
+<a href="#sobre-mi" onClick="{{closeMenu}}"><span class="n">02</span>Sobre mí</a>
+<a href="#como-puedo-ayudarte" onClick="{{closeMenu}}"><span class="n">03</span>Cómo puedo ayudarte</a>
+<a href="#como-funciona" onClick="{{closeMenu}}"><span class="n">04</span>Cómo funciona</a>
+<a href="#preguntas-frecuentes" onClick="{{closeMenu}}"><span class="n">05</span>Preguntas frecuentes</a>
+<a href="#contacto" onClick="{{closeMenu}}"><span class="n">06</span>Contacto</a>
+</nav>
+<div class="mmenu-foot">
+<a class="btn btn-ink" href="{{whatsapp}}" target="_blank" rel="noopener" onClick="{{closeMenu}}"><span class="mag-inner">Agendar una sesión<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></a>
+<p>WhatsApp {{whatsappNumero}} · {{modalidad}} · {{ciudad}}, {{pais}}</p>
+</div>
+</div>
+
+<main id="contenido">
+
+<section class="leaf" id="introduccion" aria-label="Introducción" data-intro="">
+<div class="leaf-stage" data-leaf-stage="">
+<img class="leaf-poster" src="./assets/227fb0421c1816ec128ec548b54c5f89.jpg" alt="" aria-hidden="true">
+<canvas class="leaf-canvas" data-leaf-canvas="" aria-hidden="true"></canvas>
+<p class="leaf-quote" data-leaf-quote=""><span data-intro-q1="">No toda caída es un final.</span><span data-intro-q2="">A veces es solo <em>el tiempo de posarse.</em></span></p>
+<div class="leaf-hint" data-leaf-hint="" aria-hidden="true"><span>Desliza para entrar</span><span class="leaf-hint-line"></span></div>
+<a class="leaf-skip ulink" href="#inicio">Saltar introducción</a>
+<div class="leaf-veil" data-leaf-veil="" aria-hidden="true"></div>
+</div>
+</section>
+
+<section id="inicio" class="hero" data-section="0" aria-labelledby="hero-title">
+<div class="wrap grid hero-grid">
+<div class="hero-copy">
+<p class="eyebrow" data-reveal="" data-d="1"><span class="eyebrow-line"></span><span>Psicóloga · {{enfoque}}</span></p>
+<h1 id="hero-title" class="display-xl hero-title" data-reveal="words">
+<span class="ln"><span class="w" data-d="2">Hay</span> <span class="w" data-d="3">cosas</span> <span class="w" data-d="4">que</span></span>
+<span class="ln in1"><span class="w" data-d="5">se</span> <span class="w" data-d="6">entienden</span> <span class="w" data-d="7">mejor</span></span>
+<span class="ln in2"><em><span class="w" data-d="8">cuando</span> <span class="w" data-d="9">se</span> <span class="w" data-d="10">dicen</span></em></span>
+<span class="ln"><span class="w" data-d="11">en</span> <span class="w" data-d="12">voz</span> <span class="w" data-d="13">alta.</span></span>
+</h1>
+<div class="hero-lower">
+<p class="hero-sub" data-reveal="" data-d="5">Soy {{nombre}}, psicóloga general sanitaria. Acompaño a personas que atraviesan ansiedad, cansancio emocional, cambios importantes o preguntas sobre sí mismas, desde un enfoque de {{enfoque}}. Sesiones {{modalidad}} en {{ciudad}}.</p>
+<div class="hero-actions" data-reveal="" data-d="7">
+<a class="btn btn-ink" data-magnetic="0.3" href="{{whatsapp}}" target="_blank" rel="noopener"><span class="mag-inner" data-magnetic-inner="">Agendar una sesión<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></a>
+<a class="tlink" href="#como-funciona">Conoce mi forma de acompañarte</a>
+</div>
+</div>
+</div>
+<figure class="hero-figure">
+<div class="photo-frame" data-reveal="image" data-d="4" data-cursor-media="">
+<div class="photo-par" data-parallax="0.07">
+<div class="photo-scale">
+<img class="photo-img" src="./assets/51ebf004274b7789bd03743e4154b438.jpg" alt="Retrato de {{nombre}}, psicóloga general sanitaria en {{ciudad}}">
+</div>
+</div>
+</div>
+<span class="hero-block" aria-hidden="true"></span>
+<figcaption class="hero-caption"><span>{{nombre}}</span><span>{{ciudad}}, {{pais}}</span></figcaption>
+</figure>
+<dl class="hero-meta" data-reveal="" data-d="8">
+<div><dt class="micro">Enfoque</dt><dd>{{enfoque}}</dd></div>
+<div><dt class="micro">Modalidad</dt><dd>{{modalidad}}</dd></div>
+<div><dt class="micro">Consulta</dt><dd>{{ciudad}}, {{pais}}</dd></div>
+<div><dt class="micro">Horarios</dt><dd>{{horarios}}</dd></div>
+</dl>
+</div>
+</section>
+
+<section id="sobre-mi" class="section about" data-section="1" aria-labelledby="about-title">
+<div class="wrap">
+<div class="grid sec-head">
+<p class="sec-label" data-reveal=""><span class="num">01</span>Sobre mí</p>
+<h2 id="about-title" class="display-l sec-title" data-reveal="clip">Una terapia que se construye <em>contigo</em>, no sobre ti.</h2>
+</div>
+<div class="grid about-grid">
+<figure class="about-figure">
+<div class="photo-frame" data-reveal="image" data-cursor-media="">
+<div class="photo-par" data-parallax="0.09">
+<div class="photo-scale">
+<img class="photo-img" src="./assets/c35d85d29396f9b31c3eaf930ffe0a40.jpg" alt="{{nombre}}, psicóloga en {{ciudad}}, sonriendo con sus gafas de montura negra">
+</div>
+</div>
+</div>
+<figcaption><span>{{nombre}}</span><span>Consulta en {{ciudad}}</span></figcaption>
+</figure>
+<div class="about-text">
+<p class="lead" data-reveal="">Soy {{nombre}}. Trabajo como psicóloga en {{ciudad}} y en línea, con personas que sienten que algo se ha movido por dentro —a veces con un nombre claro, a veces sin él— y quieren entenderlo con calma.</p>
+<div class="cols-2">
+<p data-reveal="" data-d="1">Entiendo la terapia como un trabajo compartido. Tú traes tu historia y tu manera de vivirla; yo aporto escucha, preguntas y herramientas de {{enfoque}} para que puedas mirar lo que te pasa desde otro lugar.</p>
+<p data-reveal="" data-d="2">No hay un guion fijo. Empezamos por lo que hoy te pesa y vamos ajustando el ritmo, los objetivos y la forma de trabajar a lo que necesitas en cada etapa.</p>
+</div>
+<ol class="principles">
+<li data-reveal=""><span class="n">i.</span><h3>Escuchar antes de proponer</h3><p>Las primeras sesiones sirven para conocerte, no para darte respuestas rápidas.</p></li>
+<li data-reveal="" data-d="1"><span class="n">ii.</span><h3>Hablar con claridad</h3><p>Te explico cómo trabajo, qué podemos esperar del proceso y qué no, para que decidas con información.</p></li>
+<li data-reveal="" data-d="2"><span class="n">iii.</span><h3>Un espacio reservado</h3><p>Lo que compartes en sesión se queda ahí, dentro del marco ético y legal de la profesión.</p></li>
+</ol>
+</div>
+</div>
+<blockquote class="pull">
+<p data-reveal="clip">«No tienes que llegar con todo resuelto. Para eso está el proceso.»</p>
+<footer data-reveal="" data-d="3">{{nombre}}</footer>
+</blockquote>
+<dl class="grid creds">
+<div data-reveal=""><dt class="micro">Formación</dt><dd>Psicóloga General Sanitaria</dd></div>
+<div data-reveal="" data-d="1"><dt class="micro">Registro profesional</dt><dd>[N.º DE REGISTRO O COLEGIATURA]</dd></div>
+<div data-reveal="" data-d="2"><dt class="micro">Enfoque terapéutico</dt><dd>{{enfoque}}</dd></div>
+</dl>
+<div class="ten" id="diez-cosas">
+<div class="grid ten-grid">
+<div class="ten-aside">
+<p class="sec-label" data-reveal=""><span class="num">01 · b</span>Fuera de la consulta</p>
+<h3 class="display-m" data-reveal="clip">Diez cosas <em>sobre mí.</em></h3>
+<p class="ten-intro" data-reveal="" data-d="2">Quien te acompaña también tiene una vida, unas pasiones y una historia. Estas son algunas de las mías.</p>
+<div class="ten-photos">
+<figure class="ten-ph ten-ph-a">
+<div class="photo-frame" data-reveal="image" data-cursor-media="">
+<div class="photo-par" data-parallax="0.06">
+<div class="photo-scale"><img class="photo-img" src="./assets/b316fe06917caf6ffd599bb3faf1e4e1.jpg" alt="{{nombre}} sonriendo junto a dos amigas"></div>
+</div>
+</div>
+<figcaption>Con mis amigas</figcaption>
+</figure>
+<figure class="ten-ph ten-ph-b">
+<div class="photo-frame" data-reveal="image" data-d="3" data-cursor-media="">
+<div class="photo-par" data-parallax="0.08">
+<div class="photo-scale"><img class="photo-img" src="./assets/4830f8fafcc519ef4bcf5f6cfbdff70a.jpg" alt="Mew, un gato de pelo claro y ojos azules"></div>
+</div>
+</div>
+<figcaption>Mew</figcaption>
+</figure>
+</div>
+</div>
+<ol class="ten-list">
+<li data-reveal=""><span class="n">01</span><p>No soy capaz de entender la vida sin <strong>amigas</strong>.</p></li>
+<li data-reveal=""><span class="n">02</span><p>También <strong>he ido a terapia</strong>, y gracias a ello pude salir de situaciones complicadas.</p></li>
+<li data-reveal=""><span class="n">03</span><p>La persona de mi vida es y será <strong>mi madre</strong>.</p></li>
+<li data-reveal=""><span class="n">04</span><p>Siempre necesito <strong>comprender</strong> por qué suceden las cosas.</p></li>
+<li data-reveal=""><span class="n">05</span><p><strong>Viajar</strong> es el motor de mi vida.</p></li>
+<li data-reveal=""><span class="n">06</span><p>Además de la psicología, mi otra gran pasión es el <strong>jiujitsu</strong>, un arte marcial de combate en suelo.</p></li>
+<li data-reveal=""><span class="n">07</span><p>Soy <strong>mamá gatuna</strong> de un peludito precioso que se llama Mew.</p></li>
+<li data-reveal=""><span class="n">08</span><p>Me encantan los <strong>videojuegos</strong>.</p></li>
+<li data-reveal=""><span class="n">09</span><p>Me fascina <strong>el mar</strong> y, sobre todo, observar la vida marina y los pececitos.</p></li>
+<li data-reveal=""><span class="n">10</span><p>Me encanta <strong>leer</strong> y adentrarme en otros mundos.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+
+<section id="como-puedo-ayudarte" class="section help" data-section="2" aria-labelledby="help-title">
+<div class="wrap grid help-grid">
+<div class="help-aside">
+<p class="sec-label" data-reveal=""><span class="num">02</span>Cómo puedo ayudarte</p>
+<h2 id="help-title" class="display-m" data-reveal="clip">No hace falta que sea grave para que <em>merezca atención.</em></h2>
+<p class="intro" data-reveal="" data-d="2">Estos son algunos de los motivos por los que las personas suelen llegar a consulta. No son diagnósticos ni etiquetas: cada historia es distinta y el proceso se construye a partir de la tuya.</p>
+</div>
+<div class="help-list">
+<div class="help-row" data-reveal=""><span class="n">01</span><h3>Ansiedad y preocupación</h3><p>Cuando la mente no se detiene y cuesta estar en el presente.</p></div>
+<div class="help-row" data-reveal=""><span class="n">02</span><h3>Estrés y agotamiento emocional</h3><p>Cuando llevas tiempo sosteniendo más de lo que puedes.</p></div>
+<div class="help-row" data-reveal=""><span class="n">03</span><h3>Autoestima</h3><p>La forma en que te hablas, te miras y te tratas cuando nadie más está.</p></div>
+<div class="help-row" data-reveal=""><span class="n">04</span><h3>Relaciones y vínculos</h3><p>Pareja, familia o amistades: lo que se repite, lo que duele, lo que cuesta decir.</p></div>
+<div class="help-row" data-reveal=""><span class="n">05</span><h3>Límites personales</h3><p>Aprender a decir que no sin sentir que le fallas a alguien.</p></div>
+<div class="help-row" data-reveal=""><span class="n">06</span><h3>Cambios y decisiones</h3><p>Mudanzas, rupturas, maternidad o paternidad, trabajo: etapas que lo reordenan todo.</p></div>
+<div class="help-row" data-reveal=""><span class="n">07</span><h3>Duelo y pérdidas</h3><p>Darle un lugar a lo que se fue, a tu tiempo y a tu manera.</p></div>
+<div class="help-row" data-reveal=""><span class="n">08</span><h3>Autoconocimiento</h3><p>Querer entenderte mejor, aunque no haya ninguna crisis de por medio.</p></div>
+<div class="help-note" data-reveal="">
+<p>¿No encuentras aquí lo que te pasa? También está bien. Podemos hablarlo en un primer contacto.</p>
+<a class="tlink" href="{{whatsapp}}" target="_blank" rel="noopener">Escríbeme<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="como-funciona" class="section process" data-section="3" aria-labelledby="process-title">
+<div class="wrap">
+<div class="grid process-head">
+<p class="sec-label" data-reveal=""><span class="num">03</span>Cómo funciona</p>
+<h2 id="process-title" class="display-l" data-reveal="clip">Un proceso claro, <em>a tu ritmo.</em></h2>
+<p class="intro" data-reveal="" data-d="2">Empezar terapia suele traer preguntas. Este es, paso a paso, el camino habitual. Nada es rígido: lo vamos ajustando sobre la marcha.</p>
+</div>
+<ol class="steps">
+<li class="step" data-reveal=""><span class="step-line" data-reveal="line"></span><span class="num">01</span><h3>Primer contacto</h3><p>Me escribes por WhatsApp al <a class="wa-link" href="{{whatsapp}}" target="_blank" rel="noopener">{{whatsappNumero}}</a> o por correo. Te respondo personalmente para resolver dudas, confirmar disponibilidad y acordar un horario.</p></li>
+<li class="step" data-reveal="" data-d="2"><span class="step-line" data-reveal="line" data-d="2"></span><span class="num">02</span><h3>Primera sesión</h3><p>Es un espacio para conocernos. Me cuentas qué te trae, te explico cómo trabajo y valoramos si este acompañamiento encaja contigo.</p></li>
+<li class="step" data-reveal="" data-d="4"><span class="step-line" data-reveal="line" data-d="4"></span><span class="num">03</span><h3>Construimos tu proceso</h3><p>Definimos objetivos a tu medida, la frecuencia de las sesiones y la forma de trabajo. Todo puede revisarse en el camino.</p></li>
+<li class="step" data-reveal="" data-d="6"><span class="step-line" data-reveal="line" data-d="6"></span><span class="num">04</span><h3>Acompañamiento continuo</h3><p>Sesiones regulares para profundizar, revisar cómo te sientes y ajustar lo necesario. Tú marcas el ritmo, también el momento de cerrar.</p></li>
+</ol>
+<dl class="session-info" data-reveal="">
+<div><dt class="micro">Modalidad</dt><dd>{{modalidad}}</dd></div>
+<div><dt class="micro">Duración de cada sesión</dt><dd>{{duracion}}</dd></div>
+<div><dt class="micro">Horarios de atención</dt><dd>{{horarios}}</dd></div>
+</dl>
+</div>
+</section>
+
+<section id="testimonios" class="section testimonials" data-section="4" aria-labelledby="testi-title">
+<div class="wrap grid testi-grid">
+<p class="sec-label" data-reveal=""><span class="num">04</span>Testimonios</p>
+<h2 id="testi-title" data-reveal="clip">Algunas palabras de quienes ya han pasado por consulta.</h2>
+<div class="quotes">
+<figure class="quote" data-reveal=""><span class="mark" aria-hidden="true">«</span><blockquote><p>[TESTIMONIO REAL 01]</p></blockquote><figcaption>[INICIAL DEL PACIENTE]</figcaption></figure>
+<figure class="quote" data-reveal="" data-d="2"><span class="mark" aria-hidden="true">«</span><blockquote><p>[TESTIMONIO REAL 02]</p></blockquote><figcaption>[INICIAL DEL PACIENTE]</figcaption></figure>
+</div>
+<p class="testi-note" data-reveal="">Los testimonios se publican con consentimiento expreso y de forma anónima. Cada proceso es personal y ninguna experiencia ajena anticipa un resultado.</p>
+</div>
+</section>
+
+<section id="preguntas-frecuentes" class="section faq" data-section="5" aria-labelledby="faq-title">
+<div class="wrap grid faq-grid">
+<div class="faq-aside">
+<p class="sec-label" data-reveal=""><span class="num">05</span>Preguntas frecuentes</p>
+<h2 id="faq-title" class="display-m" data-reveal="clip">Lo que suele preguntarse <em>antes de empezar.</em></h2>
+<p class="intro" data-reveal="" data-d="2">¿Tienes otra duda? Escríbeme y la resolvemos, sin ningún compromiso.</p>
+<a class="tlink" href="{{whatsapp}}" target="_blank" rel="noopener" data-reveal="" data-d="3">Escribir por WhatsApp<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="faq-list" data-reveal="">
+<div class="faq-item {{f0.cls}}"><h3 class="faq-h"><button class="faq-q" type="button" id="faq-q-0" aria-expanded="{{f0.expanded}}" aria-controls="faq-a-0" onClick="{{f0.toggle}}"><span>¿Cómo funciona una sesión de terapia online?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-panel" id="faq-a-0" role="region" aria-labelledby="faq-q-0"><div><p>Nos encontramos por videollamada en el horario acordado. Solo necesitas una conexión estable y un lugar tranquilo donde puedas hablar con privacidad. Antes de la primera sesión te envío el enlace y las indicaciones necesarias.</p></div></div></div>
+<div class="faq-item {{f1.cls}}"><h3 class="faq-h"><button class="faq-q" type="button" id="faq-q-1" aria-expanded="{{f1.expanded}}" aria-controls="faq-a-1" onClick="{{f1.toggle}}"><span>¿Cuánto dura una sesión?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-panel" id="faq-a-1" role="region" aria-labelledby="faq-q-1"><div><p>Cada sesión dura {{duracion}}. Es un tiempo pensado para poder profundizar sin que resulte agotador.</p></div></div></div>
+<div class="faq-item {{f2.cls}}"><h3 class="faq-h"><button class="faq-q" type="button" id="faq-q-2" aria-expanded="{{f2.expanded}}" aria-controls="faq-a-2" onClick="{{f2.toggle}}"><span>¿Con qué frecuencia se realizan las sesiones?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-panel" id="faq-a-2" role="region" aria-labelledby="faq-q-2"><div><p>Al principio suele recomendarse una sesión semanal, porque da continuidad al proceso. Con el tiempo podemos espaciarlas. Lo decidimos en conjunto, según tus necesidades y posibilidades.</p></div></div></div>
+<div class="faq-item {{f3.cls}}"><h3 class="faq-h"><button class="faq-q" type="button" id="faq-q-3" aria-expanded="{{f3.expanded}}" aria-controls="faq-a-3" onClick="{{f3.toggle}}"><span>¿Qué sucede durante la primera sesión?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-panel" id="faq-a-3" role="region" aria-labelledby="faq-q-3"><div><p>Hablamos de lo que te trae a consulta, de tu momento actual y de lo que esperas de la terapia. También te explico cómo trabajo y resolvemos tus dudas. No tienes que preparar nada ni saber exactamente qué decir.</p></div></div></div>
+<div class="faq-item {{f4.cls}}"><h3 class="faq-h"><button class="faq-q" type="button" id="faq-q-4" aria-expanded="{{f4.expanded}}" aria-controls="faq-a-4" onClick="{{f4.toggle}}"><span>¿Necesito haber hecho terapia antes?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-panel" id="faq-a-4" role="region" aria-labelledby="faq-q-4"><div><p>No. Muchas personas llegan por primera vez. Y si ya has hecho terapia, podemos partir de lo que te sirvió y de lo que no.</p></div></div></div>
+<div class="faq-item {{f5.cls}}"><h3 class="faq-h"><button class="faq-q" type="button" id="faq-q-5" aria-expanded="{{f5.expanded}}" aria-controls="faq-a-5" onClick="{{f5.toggle}}"><span>¿Cómo puedo agendar una sesión?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-panel" id="faq-a-5" role="region" aria-labelledby="faq-q-5"><div><p>Escríbeme por WhatsApp al <a class="wa-link" href="{{whatsapp}}" target="_blank" rel="noopener">{{whatsappNumero}}</a> o por correo electrónico. Te respondo para confirmar disponibilidad y acordar el día y la hora de tu primera sesión.</p></div></div></div>
+<div class="faq-item {{f6.cls}}"><h3 class="faq-h"><button class="faq-q" type="button" id="faq-q-6" aria-expanded="{{f6.expanded}}" aria-controls="faq-a-6" onClick="{{f6.toggle}}"><span>¿La terapia online puede ser adecuada para mí?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-panel" id="faq-a-6" role="region" aria-labelledby="faq-q-6"><div><p>Para muchas personas la terapia online resulta tan útil como la presencial y facilita la constancia. Aun así, no es adecuada en todos los casos. Si en el primer contacto veo que otro formato puede ayudarte más, te lo diré con claridad.</p></div></div></div>
+<div class="faq-item {{f7.cls}}"><h3 class="faq-h"><button class="faq-q" type="button" id="faq-q-7" aria-expanded="{{f7.expanded}}" aria-controls="faq-a-7" onClick="{{f7.toggle}}"><span>¿La atención es confidencial?</span><span class="faq-icon" aria-hidden="true"></span></button></h3><div class="faq-panel" id="faq-a-7" role="region" aria-labelledby="faq-q-7"><div><p>Sí. Lo que compartes en sesión está protegido por el secreto profesional y la normativa de protección de datos, con las únicas excepciones que establece la ley para proteger tu integridad o la de otras personas. Te las explico en la primera sesión.</p></div></div></div>
+</div>
+</div>
+</section>
+
+<section id="contacto" class="section cta" data-section="6" aria-labelledby="cta-title">
+<div class="wrap grid cta-grid">
+<p class="sec-label" data-reveal=""><span class="num">06</span>Contacto</p>
+<h2 id="cta-title" class="cta-title" data-reveal="clip">Puedes llegar con dudas, con pocas palabras o con demasiadas. <em>Por ahí se empieza.</em></h2>
+<div class="cta-action" data-reveal="" data-d="3">
+<a class="cta-circle" data-magnetic="0.35" href="{{whatsapp}}" target="_blank" rel="noopener"><span class="mag-inner" data-magnetic-inner="">Hablar conmigo<svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span></a>
+</div>
+<p class="cta-sub" data-reveal="" data-d="2">Escríbeme y te respondo personalmente. El primer contacto sirve para resolver tus dudas y ver, sin compromiso, si este espacio es para ti.</p>
+<p class="cta-mail" data-reveal="" data-d="4">WhatsApp: <a href="{{whatsapp}}" target="_blank" rel="noopener">{{whatsappNumero}}</a><br>Si lo prefieres, escríbeme a <a href="{{emailHref}}">{{email}}</a></p>
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+<div class="wrap">
+<div class="grid footer-top">
+<div class="footer-intro">
+<span class="micro">Psicóloga · {{enfoque}}</span>
+<p>Un espacio para pensar lo que te pasa, con calma y sin juicio.</p>
+</div>
+<div class="footer-col wide">
+<span class="micro">Contacto</span>
+<ul>
+<li><a class="ulink" href="{{emailHref}}">{{email}}</a></li>
+<li><a class="ulink" href="{{igHref}}" target="_blank" rel="noopener">Instagram · {{instagram}}</a></li>
+<li><a class="ulink" href="{{whatsapp}}" target="_blank" rel="noopener">WhatsApp · {{whatsappNumero}}</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<span class="micro">Consulta</span>
+<ul>
+<li>{{modalidad}}</li>
+<li>{{ciudad}}, {{pais}}</li>
+<li>{{horarios}}</li>
+</ul>
+</div>
+<div class="footer-col">
+<span class="micro">Información</span>
+<ul>
+<li><a class="ulink" href="#privacidad">Privacidad</a></li>
+<li><a class="ulink" href="#aviso-legal">Aviso legal</a></li>
+<li><a class="ulink" href="#contacto">Contacto</a></li>
+</ul>
+</div>
+</div>
+<p class="footer-word" aria-hidden="true">{{nombre}}</p>
+<div class="footer-bottom">
+<p>© {{year}} {{nombre}} · Todos los derechos reservados</p>
+<p>Este espacio no ofrece atención de urgencias. Si te encuentras en una situación de riesgo, contacta con los servicios de emergencia de tu país.</p>
+</div>
+</div>
+</footer>
+
+<div class="wa-float" data-wa-float="">
+<a class="wa-btn" data-magnetic="0.3" href="{{whatsapp}}" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp al {{whatsappNumero}}"><span class="mag-inner" data-magnetic-inner=""><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5l1.2-3.6A8 8 0 1 1 8.4 18.4z"></path><path d="M9 10.5h6M9 13.5h4"></path></svg><span class="wa-txt"><span class="wa-k">Escríbeme</span><span class="wa-n">{{whatsappNumero}}</span></span></span></a>
+</div>
+<p class="sec-ind" data-sec-ind="" aria-hidden="true"><span class="num">{{secNum}}</span><span>{{secName}}</span></p>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"nombre":{"editor":"text","default":"Irene Ruiz","section":"Datos de la consulta"},"enfoque":{"editor":"text","default":"[ENFOQUE TERAPÉUTICO]","section":"Datos de la consulta"},"ciudad":{"editor":"text","default":"[CIUDAD]","section":"Datos de la consulta"},"pais":{"editor":"text","default":"España","section":"Datos de la consulta"},"modalidad":{"editor":"text","default":"[MODALIDAD]","section":"Datos de la consulta"},"horarios":{"editor":"text","default":"[HORARIOS DE ATENCIÓN]","section":"Datos de la consulta"},"duracion":{"editor":"text","default":"[DURACIÓN DE LA SESIÓN]","section":"Datos de la consulta"},"whatsapp":{"editor":"text","default":"https://wa.me/34614631018?text=Hola%2C%20Irene.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20las%20sesiones.","section":"Contacto"},"whatsappNumero":{"editor":"text","default":"+34 614 63 10 18","section":"Contacto"},"email":{"editor":"text","default":"[CORREO ELECTRÓNICO]","section":"Contacto"},"instagram":{"editor":"text","default":"[@INSTAGRAM]","section":"Contacto"},"$preview":{"width":1440,"height":13400}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    this._timer = setTimeout(() => this.initMotion(), 20);
+  }
+  componentWillUnmount() {
+    clearTimeout(this._timer);
+    if (this._cleanup) this._cleanup();
+    if (typeof document !== 'undefined') document.body.style.overflow = '';
+  }
+  setMenu(open) {
+    document.body.style.overflow = open ? 'hidden' : '';
+    this.setState({ menu: open });
+  }
+  initIntro(root, reduce, on, offs) {
+    const sec = root.querySelector('[data-intro]');
+    if (!sec) return;
+    const FRAMES = ['./assets/227fb0421c1816ec128ec548b54c5f89.jpg','./assets/f120becf644ee2b5ccf43a781c179124.jpg','./assets/af28ec212a83f42405e15b53ac60fdb8.jpg','./assets/2e9c1a5d5c265158784b5fd8ee829b08.jpg','./assets/f764da7bacf02f3f18b074ec6d30db64.jpg','./assets/9c0240f30432d225a05d5c89d87aea44.jpg','./assets/f23db87490efbfe4ecb58e44dfcec208.jpg','./assets/8934aab27c530f3a2f28900a3358016b.jpg','./assets/4ddcb25def204bcfbaa8b3226a69fc96.jpg','./assets/3b6717572c72a2f15e28a646229b40f7.jpg','./assets/917d34791461d422a89f4bcd43d54914.jpg','./assets/da76567e0db375b7abb3246195a192b2.jpg','./assets/954b023daa1936a758f7b51af3150884.jpg','./assets/a72b3708b4125fd57c9669de4f341acd.jpg','./assets/d40605e31b0a2b5663f0eea33f922e45.jpg','./assets/f1a752a2fa35353a178b127528215e50.jpg','./assets/66b10040574211f15451d683b82d8988.jpg','./assets/fcbe40ef0cb17522c5f30cf49e0e2522.jpg','./assets/52423929137502c767dbc4f8216ad527.jpg','./assets/26aad043f95f3a7437635e15ba342fb7.jpg','./assets/96514bbf05e4f91525487a4316f31e9a.jpg','./assets/0a9f5043914c4353ed951b6a9a8e5430.jpg','./assets/108b71a4a117b019e6ec7e92c8ff007d.jpg','./assets/1a144aabf7e3d885fd932224bdf5c20d.jpg','./assets/1692af462b97b2b18725364e464b9ef6.jpg','./assets/bfd59c09fecccb6ce8ff58f1fed6ebbb.jpg','./assets/3fb6e1ed8097bf9539f7c8d3ae18950f.jpg','./assets/5557c0f01e54265e5ee8474f91f4fe10.jpg','./assets/d2ac91ee2f1471cde85181ae81bf6963.jpg','./assets/03c44c2b36bae6bf7818cc1919674357.jpg','./assets/57102dfcfa57c4088800f83f41ddf451.jpg','./assets/fd900114aebf7fc1b28fef9f8696a67b.jpg','./assets/a7d86fde1c4407dbcf1d55a7c2b1f9fd.jpg','./assets/102bc1195e6968632ccdb21e4c144ea7.jpg','./assets/a3fd8bb351aa86908ce26c72f196f260.jpg','./assets/885920846a01e3f43288a95dab545e96.jpg','./assets/ac9867568d6dccbc6a6007013c425f5e.jpg','./assets/3b0d0e0e6db02923ae59be602cc1e80f.jpg','./assets/9a90d754ce45ef79caa77010d45035d9.jpg','./assets/7358e05b7a34af572f789d198f58b490.jpg','./assets/f327df249e730f1f4f57421b37511f3b.jpg','./assets/12e3f032ef6faf6f601cf274ec49f96f.jpg','./assets/77cd527bffe3e318fd6f455b05c825b7.jpg','./assets/e15fc6bc73859f12e461a0efda5dbc97.jpg','./assets/26d1e8e2219b99a652f42b6d5bb55b0d.jpg','./assets/2f998e6e8c091c592ec42ebbd88d6b66.jpg','./assets/01e2fe3160d42800a8bbcb480a33f9f2.jpg','./assets/c80f33381f8ccc47748fc703a2a9fe15.jpg','./assets/8dbdedf9b7a245dadefecd94059b9655.jpg','./assets/7ea6f4f36f202b071a2fc0f9aa22108f.jpg','./assets/3fcb323283850471a4fe89ef793ad4cf.jpg','./assets/f769826fc8f342f9e48891f3d4223030.jpg','./assets/38d26baf4c4a03a184665d81ea1c491c.jpg','./assets/22a817f6ea7a3ffcff1874e24eec273d.jpg','./assets/61ae5646e463e0e68eb814e7ae3d3024.jpg','./assets/8511e1141fe9b3db952e863f0a9f000f.jpg','./assets/4257d5cbe8467b9198ed6ddbc51deb60.jpg','./assets/cea2941888462dc3211614b0a1de0e86.jpg','./assets/7c0f33893a4053e09f87a7ee612c1bee.jpg','./assets/c15326879e3c1e568dd834eb890761b2.jpg','./assets/1f3f52337305cab655d86c18515b3c88.jpg','./assets/c7581ef266b7e6afc6d303c2fcc73f21.jpg','./assets/6f2d0e9123e482e95a057042c8798454.jpg','./assets/5360bb6445ce8ecf9a37b5bcda32c8da.jpg','./assets/b6cc2bee5471e52b8b11b049a88c8ca9.jpg','./assets/09abe24d333d551901c098fb228fd171.jpg','./assets/d8026e2d6bed09901302b48a501fbb7b.jpg','./assets/bc3915c78d5e6712b264f6699c5eadd1.jpg','./assets/8b0a97d31f02d21b4199f2fa0ab4078f.jpg','./assets/12fd0dd37d9be8ba6847daf61ca85384.jpg','./assets/a766dd8d31ef85bdfbb00a1c29c43fa2.jpg','./assets/9767d338a2c6ed90a6156fb5fafcc139.jpg','./assets/01bfe9641f3924a1ea1c9cd422b9ae71.jpg','./assets/7eba59d9b5c9392a1b696fdff201da99.jpg','./assets/d1c1f3110b1695ecfe7c1d63c0c47f4d.jpg','./assets/26bbd58c1bf008f4f81f2dd1c36a0e8e.jpg','./assets/3975c68ed1632897007875b8fc7c96af.jpg','./assets/45218289f41f0a04ba8aa34b952c8f55.jpg','./assets/f62e14ba6c949e26b510af2349d61e86.jpg','./assets/c3b8a087ed868fc963a4718f9f554b1f.jpg','./assets/48407c23518e05d68c2f82bdd4f5f3ef.jpg','./assets/eb04be8bdbd53793a98910dd8d6ba9c0.jpg','./assets/7385b04936a5f09526d0e5622471dde4.jpg','./assets/70da9460adb5171e922bce7521bd5d52.jpg','./assets/8f7e3979d15c0a8268bcfd8c3da86e80.jpg','./assets/83c72337ec908413ecf22ce402d64a95.jpg','./assets/01f5abee1f39e093926812433c322a96.jpg','./assets/11c30e543f449ebc5382bda020a46379.jpg','./assets/413baae1ae8fdde3cd74d4a787d12523.jpg','./assets/4f12271954f53109cf70383ba11a3d51.jpg','./assets/5aa4adbafc3bd94d68b51224ea52b55d.jpg','./assets/dac26341df2acccb0245cce1945a941c.jpg','./assets/fe5f328f946ad7196b6dba758f66e9d0.jpg','./assets/ebf8dcffae7951c032188d4a32477410.jpg','./assets/0e8a264d753d9f2e91504d0d73e71da0.jpg','./assets/3680fce0133364d84317ad7065b50497.jpg','./assets/3203300f7b95d2352bc32dbf888850a4.jpg','./assets/b3b68d2ccae0029b7b27da6f6b693fa2.jpg','./assets/14c1ce72db8ab68ed2c62ed36cbe901b.jpg','./assets/c37dd23f948edf8295be2198a6820c18.jpg','./assets/f57f5dd1d390ae8fb43011d1781f379f.jpg','./assets/0c65f43b7bd9278502370804eebf627f.jpg','./assets/bfdf295d0fb3430bfe308864b5631a57.jpg','./assets/35795e409980ffb4c1febf0237b1fd4e.jpg','./assets/dc516699034992727c9310e9db10c1b0.jpg','./assets/995eb69e82eb2273494bc6f0d49a878a.jpg','./assets/8b88bd2019f96188e1f0292e95493e47.jpg','./assets/9022888b18bb7a28323a5a59e3f399af.jpg','./assets/ac8f929b2e462b20311af34e4d629f62.jpg','./assets/eeafbe39871fb31052c930959af7b162.jpg','./assets/6bcb9fb565caaeba57ac4ab761216309.jpg','./assets/4ccd5ff557090d59a4e9aa3e2b29526b.jpg','./assets/52a63ff8162c941f0a769d520208cb38.jpg','./assets/ee2cb07ca14eee174de6e2db15169d49.jpg','./assets/0d7513dd52f93844d584b39aa35dc6ea.jpg','./assets/7553c7b6fe5c0dc4eec67298369b911e.jpg','./assets/65eb4257b576595bb1b831c71c0dbd42.jpg','./assets/fa1ee52d79ccf87438cd94ed561c42ca.jpg','./assets/12f1b9b0fba9b9fe5460cfb9a6a4c604.jpg','./assets/e9bfd2158285639774d8b2f3476f629a.jpg','./assets/de55d46a3d5bcabe03d66de67a0a4568.jpg','./assets/8f58288db65af3919d5c23bd14966479.jpg','./assets/6df187b55809273bf33903d59b150ea4.jpg','./assets/ccec5ff8155a62826018a9baed42d0eb.jpg','./assets/028a8ec36183371e552610297cf7eee1.jpg','./assets/a430d7f80656d0b6a6f82aaed0009d33.jpg','./assets/3c5c0722201f27b9373d21a4266e3b73.jpg','./assets/60160dde259d4535c997545bfd38f7f3.jpg','./assets/86241ec5bd404d588cc01c7b170b0b6d.jpg','./assets/7411dfe43f6ec241c4acba09f27868bd.jpg','./assets/d6d74c2851d99a9309cd81f5155e6c07.jpg','./assets/39d6915c063643e2a1ebd28b5e239a23.jpg','./assets/c161a6bb5e952faf7996497c979a2945.jpg','./assets/93482ec05b90b86102a00fb298ef0fd0.jpg','./assets/8e8e49a8b19968539fe20ad0d4126de3.jpg','./assets/03f71619db9ec1e0dcf4248fb760edfd.jpg','./assets/12a615901dbbeac003f350e373333386.jpg','./assets/f804b2598b54c0f73761a02ac43d6c0a.jpg','./assets/92030a3a31a174e518770f31e2e07a8a.jpg','./assets/6ff75a1e950724f47de87781c7509a61.jpg','./assets/47c5697014e03c21fe514eeb26828da4.jpg','./assets/f4fb019084d1137fcb0ae9607eda7d54.jpg','./assets/3ec7b403ff8b12eded9c377ac9fdaaf1.jpg','./assets/54d69ae8973236ba6d275fa3a55651ed.jpg','./assets/e42462599213b70e719867c6da6afce3.jpg','./assets/4508412afd87a86adc5fceb737081f34.jpg','./assets/4a978942de399842be6bc67c92df0bfe.jpg','./assets/4f129a2f0da7403e43a77c610d5d2ada.jpg','./assets/a0e8cabaa260d99b82652d5b322d2fab.jpg','./assets/7d6bfea1190e8a827f15437988881748.jpg','./assets/052e81f7130b8851db57a7ba4b6c965e.jpg','./assets/9c17905822d97b72b523d834bd793ce0.jpg','./assets/34095052f88976d0481b17058ce6ae99.jpg','./assets/cb9a8612d4bd777a71a7667fede9a300.jpg','./assets/4d1dc3471fda618f442726231e75fb2b.jpg','./assets/273e13584b01aea9e326c0e8f78b53dd.jpg','./assets/8d8548508fe782f226aca66c7bfcdefb.jpg','./assets/4b4bdefefc3dbaac29aba8b599e8341f.jpg','./assets/fd97d3e85ad04225cf9fb622d57785e2.jpg','./assets/ddcaba07425bc6ef25fd2bc04891f33a.jpg','./assets/ea994d0c22755bd18ff705ba760f6a03.jpg','./assets/b20e5485287a6d0b18942902ae89d63b.jpg','./assets/4e037e8799390eb686f390adbec26414.jpg','./assets/14bfd603c2b1ae466dfd1876345621e4.jpg','./assets/212ef3f81a554b2f784043b0024c9123.jpg','./assets/5c5afcd1910d5406bd425070d474c1fe.jpg','./assets/602195e4d22d2ee2d9dc482f72c4be78.jpg','./assets/d920ebe6636978fbf07c4b7bb7276268.jpg','./assets/8b0f6533f39af420ab8dbe3e7bb453e6.jpg','./assets/0198e4105b136d1543f828eb723bb90c.jpg','./assets/64d387effff66853083afa4a3d395c74.jpg','./assets/9625e89d0b24df636534e7d84a901e6e.jpg','./assets/21ac35b6d828c1abc2b215d421dcc852.jpg','./assets/849a0baac50a955ff965564b4e4a9203.jpg','./assets/446d81ecbd76d7f1291297d8fad0cd39.jpg','./assets/f4435fb5f270e8d4a3a5c69c47f12ae3.jpg','./assets/7ea724c681fa489b022601be309bdaae.jpg','./assets/451a15f990e991ce2fd80b2183aba3dc.jpg','./assets/1c9c88935698c91cf65ea2d974dd08cb.jpg','./assets/2b2fcd9946a6cbe1395b7cf45a0abb36.jpg'];
+    const N = FRAMES.length;
+    const IW = 1280, IH = 720, BG = '#ECE7DB';
+    const stage = sec.querySelector('[data-leaf-stage]');
+    const canvas = sec.querySelector('[data-leaf-canvas]');
+    const quote = sec.querySelector('[data-leaf-quote]');
+    const q1 = sec.querySelector('[data-intro-q1]');
+    const q2 = sec.querySelector('[data-intro-q2]');
+    const hint = sec.querySelector('[data-leaf-hint]');
+    const veil = sec.querySelector('[data-leaf-veil]');
+    const ctx = canvas && canvas.getContext ? canvas.getContext('2d') : null;
+    if (!ctx) return;
+    const imgs = new Array(N);
+    let cur = 0, target = 0, drawnKey = '', cw = 0, ch = 0, dpr = 1, portrait = false;
+    let box = { x: 0, y: 0, w: 0, h: 0 };
+    const ok = (im) => im && im.complete && im.naturalWidth > 0;
+    const load = (i) => {
+      if (imgs[i]) return imgs[i];
+      const im = new Image();
+      im.decoding = 'async';
+      im.onload = () => { if (Math.abs(i - Math.round(cur)) < 4) { drawnKey = ''; draw(); } };
+      im.src = FRAMES[i];
+      imgs[i] = im;
+      return im;
+    };
+    const pick = (i) => {
+      if (ok(imgs[i])) return imgs[i];
+      for (let d = 1; d < N; d++) {
+        if (ok(imgs[i - d])) return imgs[i - d];
+        if (ok(imgs[i + d])) return imgs[i + d];
+      }
+      return null;
+    };
+    const draw = () => {
+      const i = Math.max(0, Math.min(N - 1, Math.round(cur)));
+      const im = pick(i);
+      if (!im) return;
+      const key = i + ':' + im.src + ':' + cw + 'x' + ch;
+      if (key === drawnKey) return;
+      drawnKey = key;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.fillStyle = BG;
+      ctx.fillRect(0, 0, cw, ch);
+      ctx.drawImage(im, box.x, box.y, box.w, box.h);
+      if (portrait) {
+        const f = box.h * 0.14;
+        let g = ctx.createLinearGradient(0, box.y, 0, box.y + f);
+        g.addColorStop(0, BG); g.addColorStop(1, 'rgba(236,231,219,0)');
+        ctx.fillStyle = g; ctx.fillRect(0, box.y, cw, f);
+        g = ctx.createLinearGradient(0, box.y + box.h - f, 0, box.y + box.h);
+        g.addColorStop(0, 'rgba(236,231,219,0)'); g.addColorStop(1, BG);
+        ctx.fillStyle = g; ctx.fillRect(0, box.y + box.h - f, cw, f);
+      }
+      canvas.classList.add('is-ready');
+    };
+    const layout = () => {
+      const r = stage.getBoundingClientRect();
+      cw = r.width; ch = r.height;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(cw * dpr);
+      canvas.height = Math.round(ch * dpr);
+      portrait = ch > cw * 1.05;
+      const s = Math.max(cw / IW, (portrait ? ch * 0.62 : ch) / IH);
+      const w = IW * s, h = IH * s;
+      box = { x: (cw - w) / 2, y: (ch - h) / 2, w: w, h: h };
+      if (quote) quote.style.top = Math.round(box.y + h * (portrait ? 0.36 : 0.42)) + 'px';
+      drawnKey = '';
+      draw();
+    };
+    const clamp01 = (v) => Math.max(0, Math.min(1, v));
+    const ease = (t) => 1 - Math.pow(1 - t, 3);
+    const setLine = (el, t) => {
+      if (!el) return;
+      const e = ease(clamp01(t));
+      el.style.opacity = e.toFixed(3);
+      el.style.transform = 'translate3d(0,' + ((1 - e) * 16).toFixed(1) + 'px,0)';
+      el.style.filter = e < 1 ? 'blur(' + ((1 - e) * 6).toFixed(1) + 'px)' : 'none';
+    };
+    load(0); load(N - 1);
+    for (let i = 1; i < N - 1; i++) load(i);
+
+    if (reduce) {
+      sec.classList.add('is-static');
+      cur = target = N - 1;
+      layout();
+      on(window, 'resize', layout);
+      return;
+    }
+    const progress = () => {
+      const r = sec.getBoundingClientRect();
+      const total = sec.offsetHeight - stage.offsetHeight;
+      return total > 0 ? clamp01(-r.top / total) : 1;
+    };
+    const apply = () => {
+      const p = progress();
+      const total = sec.offsetHeight - stage.offsetHeight;
+      // Tramo final: el hero sube por encima de la hoja (efecto telón)
+      const cs = total > 0 ? clamp01((sec.offsetHeight - 2 * stage.offsetHeight) / total) : 1;
+      const a = cs > 0 ? clamp01(p / cs) : 1;
+      const c = cs < 1 ? clamp01((p - cs) / (1 - cs)) : 0;
+      target = clamp01(a / 0.74) * (N - 1);
+      if (hint) hint.style.opacity = (1 - clamp01(a / 0.08)).toFixed(3);
+      setLine(q1, (a - 0.66) / 0.14);
+      setLine(q2, (a - 0.78) / 0.14);
+      if (quote) quote.style.transform = 'translate3d(0,' + (-c * 60).toFixed(1) + 'px,0)';
+      if (veil) veil.style.opacity = (c * 0.16).toFixed(3);
+      canvas.style.transform = 'scale(' + (1 + a * 0.03 + c * 0.05).toFixed(4) + ')';
+    };
+    let raf = 0;
+    const loop = () => {
+      const r = sec.getBoundingClientRect();
+      if (r.bottom > -50 && r.top < window.innerHeight + 50) {
+        apply();
+        cur += (target - cur) * 0.2;
+        if (Math.abs(target - cur) < 0.02) cur = target;
+        draw();
+      }
+      raf = requestAnimationFrame(loop);
+    };
+    layout();
+    apply();
+    cur = target;
+    draw();
+    raf = requestAnimationFrame(loop);
+    on(window, 'resize', layout);
+    offs.push(() => cancelAnimationFrame(raf));
+  }
+  initMotion() {
+    const root = document.querySelector('[data-site-root]');
+    if (!root) return;
+    const offs = [];
+    const on = (t, ev, fn, opt) => { t.addEventListener(ev, fn, opt); offs.push(() => t.removeEventListener(ev, fn, opt)); };
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    root.classList.add('js');
+    this.initIntro(root, reduce, on, offs);
+
+    // Revelado por posición (IntersectionObserver ignora los elementos recortados con clip-path)
+    let pending = [];
+    if (reduce) {
+      root.classList.remove('motion');
+    } else {
+      pending = Array.prototype.slice.call(root.querySelectorAll('[data-reveal]'));
+    }
+    const checkReveal = (vh) => {
+      if (!pending.length) return;
+      pending = pending.filter((el) => {
+        const r = el.getBoundingClientRect();
+        if (!r.width && !r.height) return true;
+        if (r.top < vh * 0.9) { el.classList.add('is-in'); return false; }
+        return true;
+      });
+    };
+
+    const nav = root.querySelector('[data-nav]');
+    const bar = root.querySelector('[data-progress]');
+    const ind = root.querySelector('[data-sec-ind]');
+    const waf = root.querySelector('[data-wa-float]');
+    const intro = root.querySelector('[data-intro]');
+    const hero = root.querySelector('#inicio');
+    const par = Array.prototype.slice.call(root.querySelectorAll('[data-parallax]'));
+    const secs = Array.prototype.slice.call(root.querySelectorAll('[data-section]'));
+    let lastY = window.scrollY, ticking = false;
+    const update = () => {
+      ticking = false;
+      const y = window.scrollY;
+      const vh = window.innerHeight;
+      const max = document.documentElement.scrollHeight - vh;
+      const introEnd = intro ? intro.offsetTop + intro.offsetHeight : 0;
+      if (bar) bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0) + ')';
+      const menuOpen = !!(this.state && this.state.menu);
+      if (nav) {
+        nav.classList.toggle('is-scrolled', y > 24);
+        if (!menuOpen && y > lastY + 4 && y > 480) nav.classList.add('is-hidden');
+        else if (menuOpen || y < lastY - 4 || y <= 480) nav.classList.remove('is-hidden');
+        nav.classList.toggle('on-intro', !!hero && y < hero.offsetTop - vh * 0.35);
+      }
+      if (Math.abs(y - lastY) > 4 || y <= 480) lastY = y;
+      checkReveal(vh);
+      const ctaTop = secs.length ? secs[secs.length - 1].getBoundingClientRect().top : vh;
+      if (ind) {
+        // El indicador aparece mientras se desplaza y se retira en reposo para no tapar contenido
+        if (y > introEnd + 200 && ctaTop > vh * 0.7 && Math.abs(y - (this._indY || 0)) > 2) {
+          ind.classList.add('is-visible');
+          clearTimeout(this._indT);
+          this._indT = setTimeout(() => ind.classList.remove('is-visible'), 1600);
+        } else if (!(y > introEnd + 200 && ctaTop > vh * 0.7)) {
+          ind.classList.remove('is-visible');
+        }
+        this._indY = y;
+      }
+      if (waf) {
+        waf.classList.toggle('is-visible', y > introEnd + 200 && ctaTop > vh * 0.7);
+      }
+      if (!reduce) {
+        par.forEach((el) => {
+          const r = el.parentNode.getBoundingClientRect();
+          if (r.bottom < -200 || r.top > vh + 200) return;
+          const c = (r.top + r.height / 2) - vh / 2;
+          const lim = r.height * 0.06;
+          const v = Math.max(-lim, Math.min(lim, -c * parseFloat(el.getAttribute('data-parallax') || '0.07')));
+          el.style.transform = 'translate3d(0,' + v.toFixed(1) + 'px,0)';
+        });
+      }
+      let cur = 0;
+      secs.forEach((s, i) => { if (s.getBoundingClientRect().top < vh * 0.45) cur = i; });
+      if (cur !== this._sec) { this._sec = cur; this.setState({ sec: cur }); }
+    };
+    const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+    on(window, 'scroll', onScroll, { passive: true });
+    on(window, 'resize', onScroll);
+    update();
+
+    // Desplazamiento suave con inercia (rueda del ratón / trackpad en escritorio)
+    if (fine && !reduce) {
+      let sTarget = window.scrollY, sCur = window.scrollY, sAnim = false, sRaf = 0;
+      const maxY = () => document.documentElement.scrollHeight - window.innerHeight;
+      const stop = () => { sAnim = false; cancelAnimationFrame(sRaf); };
+      const step = () => {
+        sCur += (sTarget - sCur) * 0.1;
+        if (Math.abs(sTarget - sCur) < 0.4) { sCur = sTarget; sAnim = false; }
+        window.scrollTo({ top: sCur, left: 0, behavior: 'instant' });
+        if (sAnim) sRaf = requestAnimationFrame(step);
+      };
+      on(window, 'wheel', (e) => {
+        if (e.ctrlKey || e.defaultPrevented) return;
+        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+        if (this.state && this.state.menu) return;
+        const t = e.target;
+        if (t && t.closest && t.closest('[data-native-scroll]')) return;
+        e.preventDefault();
+        if (!sAnim) { sCur = window.scrollY; sTarget = sCur; }
+        const dy = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaMode === 2 ? e.deltaY * window.innerHeight : e.deltaY;
+        sTarget = Math.max(0, Math.min(maxY(), sTarget + dy));
+        if (!sAnim) { sAnim = true; sRaf = requestAnimationFrame(step); }
+      }, { passive: false });
+      on(window, 'scroll', () => { if (!sAnim) { sCur = sTarget = window.scrollY; } }, { passive: true });
+      on(root, 'click', (e) => { if (e.target && e.target.closest && e.target.closest('a[href^="#"]')) stop(); });
+      on(window, 'pointerdown', () => stop());
+      offs.push(stop);
+    }
+
+    let raf = 0;
+    if (fine && !reduce) {
+      root.classList.add('has-cursor');
+      const cur = root.querySelector('[data-cursor]');
+      const dot = root.querySelector('[data-cursor-dot]');
+      const ring = root.querySelector('[data-cursor-ring]');
+      const mags = Array.prototype.slice.call(root.querySelectorAll('[data-magnetic]'));
+      let mx = -100, my = -100, rx = -100, ry = -100;
+      const magnet = (e) => {
+        mags.forEach((m) => {
+          const r = m.getBoundingClientRect();
+          const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+          const dx = e.clientX - cx, dy = e.clientY - cy;
+          const reach = 36;
+          const inside = Math.abs(dx) < r.width / 2 + reach && Math.abs(dy) < r.height / 2 + reach;
+          const inner = m.querySelector('[data-magnetic-inner]');
+          if (inside) {
+            const s = parseFloat(m.getAttribute('data-magnetic')) || 0.3;
+            m.style.transform = 'translate3d(' + (dx * s).toFixed(1) + 'px,' + (dy * s).toFixed(1) + 'px,0)';
+            if (inner) inner.style.transform = 'translate3d(' + (dx * s * 0.45).toFixed(1) + 'px,' + (dy * s * 0.45).toFixed(1) + 'px,0)';
+            m._mag = true;
+          } else if (m._mag) {
+            m.style.transform = '';
+            if (inner) inner.style.transform = '';
+            m._mag = false;
+          }
+        });
+      };
+      on(window, 'mousemove', (e) => {
+        mx = e.clientX; my = e.clientY;
+        if (cur) cur.classList.remove('is-out');
+        if (dot) dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        const t = e.target && e.target.closest ? e.target.closest('a,button,[data-cursor-media]') : null;
+        const media = !!(t && t.hasAttribute('data-cursor-media'));
+        if (cur) { cur.classList.toggle('is-link', !!t && !media); cur.classList.toggle('is-media', media); }
+        magnet(e);
+      }, { passive: true });
+      on(document, 'mouseleave', () => { if (cur) cur.classList.add('is-out'); });
+      const loop = () => {
+        rx += (mx - rx) * 0.18; ry += (my - ry) * 0.18;
+        if (ring) ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        raf = requestAnimationFrame(loop);
+      };
+      raf = requestAnimationFrame(loop);
+    }
+    this._cleanup = () => { offs.forEach((f) => f()); cancelAnimationFrame(raf); root.classList.remove('has-cursor'); };
+  }
+  renderVals() {
+    const p = this.props || {};
+    const s = this.state || {};
+    const val = (k, d) => { const v = p[k]; return (v === undefined || v === null || String(v).trim() === '') ? d : String(v); };
+    const nombre = val('nombre', 'Irene Ruiz');
+    const email = val('email', '[CORREO ELECTRÓNICO]');
+    const instagram = val('instagram', '[@INSTAGRAM]');
+    const wa = val('whatsapp', 'https://wa.me/34614631018?text=Hola%2C%20Irene.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20las%20sesiones.');
+    const whatsapp = /^https?:\/\//.test(wa) ? wa : '#contacto';
+    const handle = instagram.replace(/^@/, '').replace(/[\[\]@\s]/g, '');
+    const openIdx = s.faq === undefined ? 0 : s.faq;
+    const faq = {};
+    for (let i = 0; i < 8; i++) {
+      const open = openIdx === i;
+      faq['f' + i] = { cls: open ? 'is-open' : '', expanded: open ? 'true' : 'false', toggle: () => this.setState({ faq: open ? -1 : i }) };
+    }
+    const names = ['Inicio', 'Sobre mí', 'Cómo puedo ayudarte', 'Cómo funciona', 'Testimonios', 'Preguntas frecuentes', 'Contacto'];
+    const sec = s.sec || 0;
+    const menu = !!s.menu;
+    return Object.assign({
+      nombre,
+      enfoque: val('enfoque', '[ENFOQUE TERAPÉUTICO]'),
+      ciudad: val('ciudad', '[CIUDAD]'),
+      pais: val('pais', 'España'),
+      modalidad: val('modalidad', '[MODALIDAD]'),
+      horarios: val('horarios', '[HORARIOS DE ATENCIÓN]'),
+      duracion: val('duracion', '[DURACIÓN DE LA SESIÓN]'),
+      whatsapp,
+      email,
+      emailHref: email.indexOf('@') > 0 && email.indexOf('[') === -1 ? 'mailto:' + email : '#contacto',
+      instagram,
+      igHref: handle ? 'https://www.instagram.com/' + handle + '/' : '#contacto',
+      whatsappNumero: val('whatsappNumero', '+34 614 63 10 18'),
+      year: String(new Date().getFullYear()),
+      menuCls: menu ? 'is-open' : '',
+      menuExpanded: menu ? 'true' : 'false',
+      menuHidden: menu ? 'false' : 'true',
+      menuLabel: menu ? 'Cerrar' : 'Menú',
+      toggleMenu: () => this.setMenu(!menu),
+      closeMenu: () => this.setMenu(false),
+      secNum: String(sec + 1).padStart(2, '0') + ' / 07',
+      secName: names[sec] || names[0]
+    }, faq);
+  }
+}
+</script>
+</body>
+</html>
